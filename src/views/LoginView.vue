@@ -2,8 +2,8 @@
  * @Author: EasonShu
  * @Date: 2023-10-26 15:45:53
  * @LastEditors: Do not edit
- * @LastEditTime: 2023-10-26 17:12:16
- * @FilePath: \vue-manger\src\views\LoginView.vue
+ * @LastEditTime: 2023-10-26 17:38:43
+ * @FilePath: \vue-exercise\src\views\LoginView.vue
 -->
 <template>
     <div class="bg-white dark:bg-gray-900">
@@ -62,6 +62,7 @@
                             <div class="mt-6">
                                 <button
                                     class="w-full px-4 py-2 tracking-wide text-white transition-colors duration-200 transform bg-blue-500 rounded-md hover:bg-blue-400 focus:outline-none focus:bg-blue-400 focus:ring focus:ring-blue-300 focus:ring-opacity-50"
+                                    @click="HandleLogin()"
                                 >
                                     登录
                                 </button>
@@ -93,7 +94,11 @@ export default {
             },
         };
     },
-    methods: {},
+    methods: {
+        HandleLogin() {
+            this.$router.push('/home');
+        },
+    },
 };
 </script>
 

@@ -5,24 +5,30 @@
  * @LastEditTime: 2023-10-26 15:54:45
  * @FilePath: \vue-manger\src\router\index.js
  */
-import Vue from "vue";
-import VueRouter from "vue-router";
-import LoginViewVue from "../views/LoginView.vue";
+import Vue from 'vue';
+import VueRouter from 'vue-router';
+import LoginViewVue from '../views/LoginView.vue';
+import HomeViewVue from '../views/HomeView.vue';
 
 Vue.use(VueRouter);
 
 const routes = [
-  {
-    path: "/",
-    name: "login",
-    component: LoginViewVue,
-  },
+    {
+        path: '/',
+        name: 'login',
+        component: LoginViewVue,
+    },
+    {
+        path: '/home',
+        name: 'home',
+        component: HomeViewVue,
+    },
 ];
 
 const router = new VueRouter({
-  mode: "history",
-  base: process.env.BASE_URL,
-  routes,
+    mode: 'history',
+    base: process.env.BASE_URL,
+    routes,
 });
 
 export default router;
